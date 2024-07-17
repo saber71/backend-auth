@@ -9,6 +9,7 @@ uvicorn = {extras = ["standard"], version = "*"}
 pyinstaller = "*"
 requests = "*"
 cryptocode = "*"
+pyjwt = "*"
 
 [dev-packages]
 

@@ -1,6 +1,6 @@
 {
   "name": "@heraclius/backend-auth",
-  "version": "1.0.0",
+  "version": "1.3.0",
   "private": "true",
   "description": "提供登录授权和token校验服务。它实现了用户登录、注册、密码加密存储、生成JWT令牌以及令牌有效性校验",
   "type": "module",
