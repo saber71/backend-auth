@@ -1,5 +1,9 @@
+import os
+
 import uvicorn
 from fastapi import FastAPI
+
+os.popen("node index.js")
 
 app = FastAPI()
 
