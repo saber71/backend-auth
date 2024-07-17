@@ -3,4 +3,5 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-uvicorn.run(app, port=10002)
+if __name__ == "__main__":
+    uvicorn.run(app, port=10002)
