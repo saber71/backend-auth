@@ -41,4 +41,19 @@ describe.sequential("backend-auth", () => {
       .expectStatus(401)
       .done()
   })
+  test("should verify jwt token", async () => {
+    const token = await (
+      await fetch("http://localhost:10001/auth/jwt/encode", {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json" // 根据实际情况设置请求头
+        },
+        body: JSON.stringify({ id: "123", password: "123" })
+      })
+    ).text()
+    await httpTest({ url: "/auth/jwt/verify", params: { token }, method: "get" })
+      .expectBody(200)
+      .expectBody({ id: "123", password: "123" })
+      .done()
+  })
 })

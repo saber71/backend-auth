@@ -1,8 +1,9 @@
 import datetime
+import time
 from typing import Dict
 
 import jwt
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Response
 
 import constants
 
@@ -28,10 +29,11 @@ def verify(token: str):
     """
     try:
         # 尝试使用密钥解码JWT令牌
-        payload = jwt.decode(token, constants.SECRET_KEY, algorithm="HS256")
+        payload = jwt.decode(token, constants.SECRET_KEY, algorithms=["HS256"])
         payload.pop("exp")
         return payload
-    except:
+    except Exception as e:
+        print(e.args)
         # 解码失败时，抛出401未授权异常
         raise HTTPException(status_code=401)
 
@@ -45,6 +47,6 @@ def encode(payload: Dict):
     :return: 使用SECRET_KEY加密后的编码字符串。
     """
     # 添加过期时间戳，设置为当前时间加1小时
-    payload["exp"] = datetime.datetime.now(datetime.UTC) + datetime.timedelta(hours=1)
+    payload["exp"] = time.time() + datetime.timedelta(hours=1).seconds
     # 使用SECRET_KEY和payload数据加密生成JWT编码字符串
-    return jwt.encode(payload, constants.SECRET_KEY, algorithm="HS256")
+    return Response(jwt.encode(payload, constants.SECRET_KEY, algorithm="HS256"), media_type="text/plain")

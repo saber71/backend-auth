@@ -5,14 +5,14 @@
   "description": "提供登录授权和token校验服务。它实现了用户登录、注册、密码加密存储、生成JWT令牌以及令牌有效性校验",
   "type": "module",
   "scripts": {
-    "build": "pipenv run pyinstaller main.py",
+    "build": "pipenv run pyinstaller main.py -y",
     "start": "pipenv run uvicorn main:app --port 10002 --reload",
     "test": "vitest run"
   },
   "devDependencies": {
-    "@heraclius/backend-bridge": "^1.0.0",
-    "@heraclius/external-deps-plugin": "^1.0.0",
-    "@heraclius/http-test": "^1.0.0",
+    "@heraclius/backend-bridge": "^1.1.0",
+    "@heraclius/external-deps-plugin": "^1.1.0",
+    "@heraclius/http-test": "^1.1.0",
     "@types/node": "^20.14.11",
     "unplugin-swc": "^1.5.1",
     "vite": "^5.3.4",
