@@ -1,0 +1,27 @@
+{
+  "name": "@heraclius/backend-auth",
+  "version": "1.0.0",
+  "private": "true",
+  "description": "提供登录授权和token校验服务。它实现了用户登录、注册、密码加密存储、生成JWT令牌以及令牌有效性校验",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "pipenv run pyinstaller main.py",
+    "run": "pipenv run python main.py",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@heraclius/external-deps-plugin": "^1.0.0",
+    "@types/node": "^20.14.11",
+    "unplugin-swc": "^1.5.1",
+    "vite": "^5.3.4",
+    "vite-plugin-dts": "^3.9.1",
+    "vitest": "^2.0.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "index.js"
+  ]
+}
