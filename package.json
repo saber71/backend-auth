@@ -12,6 +12,7 @@
   "devDependencies": {
     "@heraclius/backend-bridge": "^1.0.0",
     "@heraclius/external-deps-plugin": "^1.0.0",
+    "@heraclius/http-test": "^1.0.0",
     "@types/node": "^20.14.11",
     "unplugin-swc": "^1.5.1",
     "vite": "^5.3.4",

@@ -7,6 +7,8 @@ name = "pypi"
 fastapi = "*"
 uvicorn = {extras = ["standard"], version = "*"}
 pyinstaller = "*"
+requests = "*"
+cryptocode = "*"
 
 [dev-packages]
 
