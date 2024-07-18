@@ -10,6 +10,7 @@ pyinstaller = "*"
 requests = "*"
 cryptocode = "*"
 pyjwt = "*"
+backend-storage = "*"
 
 [dev-packages]
 
