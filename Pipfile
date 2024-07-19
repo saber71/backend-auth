@@ -6,7 +6,6 @@ name = "pypi"
 [packages]
 fastapi = "*"
 uvicorn = {extras = ["standard"], version = "*"}
-pyinstaller = "*"
 requests = "*"
 cryptocode = "*"
 pyjwt = "*"
