@@ -42,11 +42,11 @@
         },
         "backend-storage": {
             "hashes": [
-                "sha256:1821655cf4141b6f30800a9c81a7313094f8e8931165001ee07c7d59d3ccf27b",
-                "sha256:2d47abc14bdffd6ded0c4eadd5c5f0be7349beb5055137f000f18b8675ca7656"
+                "sha256:c55aa00cacd47afe0c688dd5891f1f73870b92ace700a428940cbbc37c695306",
+                "sha256:ceed3f203e639583143c59bf52233bf75934b9a7b252ffb1ccd49bb34e1a9805"
             ],
             "index": "pypi",
-            "version": "==1.1.1"
+            "version": "==1.2.0"
         },
         "certifi": {
             "hashes": [
@@ -670,11 +670,11 @@
         },
         "setuptools": {
             "hashes": [
-                "sha256:1eb8ef012efae7f6acbc53ec0abde4bc6746c43087fd215ee09e1df48998711f",
-                "sha256:c51d7fd29843aa18dad362d4b4ecd917022131425438251f4e3d766c964dd1ad"
+                "sha256:3d8531791a27056f4a38cd3e54084d8b1c4228ff9cf3f2d7dd075ec99f9fd70d",
+                "sha256:f501b6e6db709818dc76882582d9c516bf3b67b948864c5fa1d1624c09a49207"
             ],
             "markers": "python_version >= '3.8'",
-            "version": "==71.0.1"
+            "version": "==71.0.3"
         },
         "shellingham": {
             "hashes": [
