@@ -30,7 +30,7 @@ def auth(data: Auth):
     password = cryptocode.decrypt(password, SECRET_KEY)
     # 如果解密后的密码与用户提供的密码不匹配，抛出未认证异常
     if password != data.password:
-        raise HTTPException(status_code=401)
+        raise HTTPException(status_code=401, detail="密码不正确")
     # 认证成功，返回"ok"
     return "ok"
 
